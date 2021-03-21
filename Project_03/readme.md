@@ -1,24 +1,24 @@
 # Data Warehouse
 
-## Introduction
+## 1- Introduction
 
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
 As their data engineer, you are tasked with building an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights in what songs their users are listening to. You'll be able to test your database and ETL pipeline by running queries given to you by the analytics team from Sparkify and compare your results with their expected results.
 
-## Project Summary
+## 2- Project Summary
 
 In this project, you'll apply what you've learned on data warehouses and AWS to build an ETL pipeline for a database hosted on Redshift. To complete the project, you will need to load data from S3 to staging tables on Redshift and execute SQL statements that create the analytics tables from these staging tables.
 
 The main Ttask is to build an ETL Pipeline that extracts data from S3, staging it in Redshift, conduct data transformation into a set of Dimensional and Fact Tables to provide insights about this data.
 
-## Project Dataset
+## 3- Project Dataset
 The below datasets were used in this project:
 1. s3://udacity-dend/log_data
 2. s3://udacity-dend/log_json_path.json
 3. s3://udacity-dend/song_data
 
-## Database Design
+## 4- Database Design
 There are two stagging tables build with the JSON files from the AWS S3 Bucket.
 
 + **staging_songs** - infrmation about songs and artists
@@ -39,9 +39,8 @@ A star schema was selected for simplicity and speed, the schema's tables are:
 The database schema is shown as follows
 ![schema](./images/diagram_DW.PNG)
 
-### Project Steps
+## 5- Project Steps
 Below are steps you can follow to complete each component of this project.
-
 
 ### Create Table Schemas
 1. Design schemas for your fact and dimension tables
@@ -65,14 +64,14 @@ Do the following steps in your README.md file.
 2. State and justify your database schema design and ETL pipeline.
 3. [Optional] Provide example queries and results for song play analysis.
 
-## Project structure
+## 6- Project structure
 1. **create_tables.py** folder with the project data
 2. **sql_queries.py** SQL statements required to perform the analysis
 3. **etl.py** Python script with instructions to extract JSON data from S3 bucket and Redshift ingestion
 4. **dwh.cfg** configuration file with info about Redshift, IAM and S3
 5. **README.md** Project description and instructions
 
-## Instructions
+## 7- Instructions
 1. Import all the necessary libraries.
 2. Write the configuration of AWS Cluster, store the important parameter in some other file
 
@@ -80,10 +79,10 @@ At the terminal:
 3.  Create tables by running create_tables.py.
 4.  Execute ETL process by running etl.py.
 
-## Author 
+## 7- Author 
 Steven Melendez Lara [linkedin](https://www.linkedin.com/in/stevenmelendezl//), [Github](https://github.com/smelendez25/)
 
-## References
+## 8- References
 The following References were used in this work, some lines of codes, wording and examples were used.
 
 1. https://github.com/rhoneybul/udacity-dend-data-warehousing
