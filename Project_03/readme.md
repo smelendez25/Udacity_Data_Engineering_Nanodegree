@@ -26,10 +26,10 @@ There are two stagging tables build with the JSON files from the AWS S3 Bucket.
 
 A star schema was selected for simplicity and speed, the schema's tables are:
 
-#### Fact Table 
+### Fact Table 
 + **songplays** - records in event data associated with song plays i.e. records with page `NextSong`
 
-#### Dimension Tables
+### Dimension Tables
 + **users** - users in the app user_id, first_name, last_name, gender, level
 + **songs** - songs in music database song_id, title, artist_id, year, duration
 + **artists** - artists in music database artist_id, name, location, lattitude, longitude
