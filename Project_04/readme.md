@@ -58,16 +58,16 @@ Do the following steps in your README.md file.
 1. Import all the necessary libraries.
 2. Write the configuration of AWS Cluster, store the important parameter in some other file
 
-## At the terminal:
+### At the terminal:
 3.  Execute ETL process by running etl.py.
 
-## At Jupyter Notebook:
+### At Jupyter Notebook:
 4.  Run the test to verify the operations
 
-## 7- Author 
+## 8- Author 
 Steven Melendez Lara [linkedin](https://www.linkedin.com/in/stevenmelendezl//), [Github](https://github.com/smelendez25/)
 
-## 8- References
+## 9- References
 The following References were used in this work, some lines of codes, wording and examples were used in this project.
 
 1. https://github.com/jukkakansanaho/udacity-dend-project-3
