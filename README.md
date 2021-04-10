@@ -5,7 +5,7 @@ Learn to design data models, build data warehouses and data lakes, automate data
 
 ## Projects:
 
-## Project 01: [Project 1 - Data Modeling with Postgres](./Project_01)
+## Project 01: [Data Modeling with Postgres](./Project_01)
 
 Developed a relational database using PostgreSQL to model user activity data for a music streaming app. Skills include:
 * Created a relational database using PostgreSQL
@@ -14,7 +14,7 @@ Developed a relational database using PostgreSQL to model user activity data for
 
 Proficiencies include: Python, PostgreSql, Star Schema, ETL pipelines, Normalization
 
-## Project 02: [Project 2 - Data Modeling with Apache Cassandra](./Project_02)
+## Project 02: [Data Modeling with Apache Cassandra](./Project_02)
 
 Designed a NoSQL database using Apache Cassandra based on the original schema outlined in project one. Skills include:
 * Created a nosql database using Apache Cassandra (both locally and with docker containers)
@@ -22,7 +22,7 @@ Designed a NoSQL database using Apache Cassandra based on the original schema ou
 
 Proficiencies used: Python, Apache Cassandra, Denormalization
 
-## Project 03: [Project 3 - Build a Cloud Data Warehouse](./Project_03)
+## Project 03: [Build a Cloud Data Warehouse](./Project_03)
 
 Created a database warehouse utilizing Amazon Redshift. Skills include:
 * Creating a Redshift Cluster, IAM Roles, Security groups.
@@ -31,7 +31,7 @@ Created a database warehouse utilizing Amazon Redshift. Skills include:
 
 Proficiencies used: Python, Amazon Redshift, aws cli, Amazon SDK, SQL, PostgreSQL
 
-## Project 04: [Project 4 - Build a Data Lake](./Project_04)
+## Project 04: [Build a Data Lake](./Project_04)
 
 Scaled up the current ETL pipeline by moving the data warehouse to a data lake. Skills include:
 * Create an EMR Hadoop Cluster
@@ -40,7 +40,7 @@ Scaled up the current ETL pipeline by moving the data warehouse to a data lake. 
 
 Technologies used: Spark, S3, EMR, Athena, Amazon Glue, Parquet.
 
-## Project 05: [Project 5 - Data Pipelines with Airflow](./Project_05)
+## Project 05: [Data Pipelines with Airflow](./Project_05)
 
 Automate the ETL pipeline and creation of data warehouse using Apache Airflow. Skills include:
 * Using Airflow to automate ETL pipelines using Airflow, Python, Amazon Redshift.
@@ -49,7 +49,7 @@ Automate the ETL pipeline and creation of data warehouse using Apache Airflow. S
 
 Technologies used: Apache Airflow, S3, Amazon Redshift, Python.
 
-## Project 06: [Project 6 - Data Engineering Capstone](./Project_06)
+## Project 06: [Data Engineering Capstone](./Project_06)
 
 This is the project work created during the  **Udacity Data Engineering Nanodegree** between Jan 2021 - May 2021.
 
