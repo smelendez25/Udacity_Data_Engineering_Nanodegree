@@ -1,4 +1,6 @@
-# Data Warehouse
+# Project 03 - Data Warehouse Management With Amazon Redshift
+
+<p align="center"><img src="images/logo.png" style="height: 100%; width: 100%; max-width: 200px" /></p>
 
 [![Project passed](https://img.shields.io/badge/project-passed-success.svg)](https://img.shields.io/badge/project-passed-success.svg)
 
