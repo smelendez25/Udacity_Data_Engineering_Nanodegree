@@ -58,10 +58,10 @@ Do the following steps in your README.md file.
 1. Import all the necessary libraries.
 2. Write the configuration of AWS Cluster, store the important parameter in some other file
 
-At the terminal:
+## At the terminal:
 3.  Execute ETL process by running etl.py.
 
-At Jupyter Notebook:
+## At Jupyter Notebook:
 4.  Run the test to verify the operations
 
 ## 7- Author 
