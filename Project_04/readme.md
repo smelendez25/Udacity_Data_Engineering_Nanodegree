@@ -72,6 +72,7 @@ Steven Melendez Lara [linkedin](https://www.linkedin.com/in/stevenmelendezl//), 
 ## 9- References
 The following References were used in this work, some lines of codes, wording and examples were used in this project.
 
-1. https://github.com/jukkakansanaho/udacity-dend-project-3
+1. https://github.com/jukkakansanaho/udacity-dend-project-4
 2. https://github.com/saurabhsoni5893/Udacity-Data-Engineering-Projects/tree/master/Data-Lakes-with-Spark
 3. https://github.com/bondxue/Udacity-Data-Engineering/tree/master/Data-Lake-with-Spark
+4. https://github.com/danieldiamond/udacity-dend
