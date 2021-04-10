@@ -1,5 +1,7 @@
 # Data Modeling with Postgres
 
+<p align="center"><img src="images/logo.png" style="height: 100%; width: 100%; max-width: 200px" /></p>
+
 [![Project passed](https://img.shields.io/badge/project-passed-success.svg)](https://img.shields.io/badge/project-passed-success.svg)
 
 ## Introduction
@@ -54,7 +56,7 @@ A Star Schema was used to complete this project, since 1 fact table and 4 dimens
 
 The proposed design was selected to gain flexibility with the queries.
 
-<img src="ERD_01.PNG" alt="ERD Diagram" width="800"/>
+<img src="images/ERD_01.PNG" alt="ERD Diagram" width="800"/>
 
 
 ## Project structure
