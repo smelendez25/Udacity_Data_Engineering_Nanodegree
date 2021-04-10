@@ -75,4 +75,4 @@ The following References were used in this work, some lines of codes, wording an
 1. https://github.com/jukkakansanaho/udacity-dend-project-4
 2. https://github.com/saurabhsoni5893/Udacity-Data-Engineering-Projects/tree/master/Data-Lakes-with-Spark
 3. https://github.com/bondxue/Udacity-Data-Engineering/tree/master/Data-Lake-with-Spark
-4. https://github.com/danieldiamond/udacity-dend
+4. https://github.com/danieldiamond/udacity-dend/tree/master/data_lake_spark
