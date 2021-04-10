@@ -5,7 +5,13 @@ Learn to design data models, build data warehouses and data lakes, automate data
 
 ### Projects:
 
-- [Project 1 - Data Modeling with Postgres](./Project_01)
+### Project 01: [Project 1 - Data Modeling with Postgres](./Project_01)
+
+Developed a relational database using PostgreSQL to model user activity data for a music streaming app. Skills include:
+* Created a relational database using PostgreSQL
+* Developed a Star Schema database using optimized definitions of Fact and Dimension tables. Normalization of tables.
+* Built out an ETL pipeline to optimize queries in order to understand what songs users listen to.
+
 - [Project 2 - Data Modeling with Apache Cassandra](./Project_02)
 - [Project 3 - Build a Cloud Data Warehouse](./Project_03)
 - [Project 4 - Build a Data Lake](./Project_04)
