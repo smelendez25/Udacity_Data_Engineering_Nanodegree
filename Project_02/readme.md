@@ -1,4 +1,6 @@
-# Data Modeling with Cassandra
+# Project 02 - NoSQL Data Modeling with Apache Cassandra
+
+<p align="center"><img src="images/logo.png" style="height: 100%; width: 100%; max-width: 200px" /></p>
 
 [![Project passed](https://img.shields.io/badge/project-passed-success.svg)](https://img.shields.io/badge/project-passed-success.svg)
 
