@@ -54,7 +54,8 @@ Do the following steps in your README.md file.
 ## 6- Project structure
 1. **etl.py** Reads data from S3, processes that data using Spark, and writes them back to S3
 2. **dl.cfg** configuration file with info about AWS credentials
-3. **README.md** Project description and instructions
+3. **test.ipynb** ETL's test file
+4. **README.md** Project description and instructions
 
 ## 7- Instructions
 1. Import all the necessary libraries.
@@ -64,7 +65,7 @@ Do the following steps in your README.md file.
 3.  Execute ETL process by running etl.py.
 
 ### At Jupyter Notebook:
-4.  Run the test to verify the operations
+4.  Run the test for verification purposes
 
 ## 8- Author 
 Steven Melendez Lara [linkedin](https://www.linkedin.com/in/stevenmelendezl//), [Github](https://github.com/smelendez25/)
