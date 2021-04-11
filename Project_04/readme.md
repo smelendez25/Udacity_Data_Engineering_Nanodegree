@@ -1,4 +1,4 @@
-# Data Lake
+# Project 04 - Data Lake & Spark
 
 <p align="center"><img src="images/logo.png" style="height: 100%; width: 100%; max-width: 200px" /></p>
 
