@@ -45,7 +45,7 @@ The database schema is shown as follows
 
 ## 5- Instructions
 1. Import all the necessary libraries.
-2. Write the configuration of AWS Cluster, store the important parameter in some other file
+2. AWS Credentials
 3. Connection with Postgres Database
 
 ## 6- Author 
