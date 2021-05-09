@@ -14,11 +14,29 @@ Custom operators will be created to perform tasks such as staging the data, fill
 
 ## 2- Project Dataset
 The below datasets were used in this project:
-1. Song data: song_data contains data about songs and artists
-2. Log data: log_data contains data about what users have done
+1. Log data: s3://udacity-dend/log_data
+2. Song data: s3://udacity-dend/song_data
 
-## 3- Database Design
-Using the song and log datasets, I created a star schema optimized for queries on song play analysis. 
+## 3 - Airflow Data  Pipeline
+The main goal in this project is to automate ETL pipelines through Airflow, extracting data from S3 buckets, loading data into staging tables and transforming the data into a star schema stored in AWS Redshift. 
+
+### DAGS
+The DAG below is created with the file udac_example_dag.py, which generates the DAG with all necessary tasks to read the files listed in the S3 buckets, create the staging tables and transform into the defined schema which is stored in AWS Redshift.  
+
+The DAGS are shown as follows
+
+![schema](./images/dags.PNG)
+
+### Operators
+Using the song and log datasets, a star schema was created and optimized for queries.
+
+### Database Design
+There are two stagging tables build with the JSON files from the AWS S3 Bucket.
+
++ **staging_songs** - infrmation about songs and artists
++ **staging_events** - users activity
+
+A star schema was selected for simplicity and speed, the schema's tables are:
 
 ### Fact Table 
 + **songplays** - records in event data associated with song plays i.e. records with page `NextSong`
@@ -31,14 +49,14 @@ Using the song and log datasets, I created a star schema optimized for queries o
 
 ### Database Schema
 The database schema is shown as follows
-![schema](./images/schema.PNG)
+![schema](./images/diagram_DW.PNG)
 
 ## 4- Project structure
-1. **udac_example_dag.py** contains the tasks and dependencies of the DAG. It should be placed in the dags directory of your Airflow installation.
-2. **create_tables.sql** contains the SQL queries used to create all the required tables in Redshift. It should be placed in the dags directory of your Airflow installation.
-3. **sql_queries.py** contains the SQL queries used in the ETL process. It should be placed in the plugins/helpers directory of your Airflow installation.
-4. **stage_redshift.py** Operator to read files from S3 and load into Redshift staging tables
-5. **load_fact.py** Operator to load the fact table in Redshift
+1. **udac_example_dag.py** contains the tasks and dependencies of the DAGS.
+2. **create_tables.sql** contains the SQL queries used to create all the required tables in AWS Redshift
+3. **sql_queries.py** contains the SQL queries used in the ETL process
+4. **stage_redshift.py** Operator to read files from S3 and load into AWS Redshift staging tables
+5. **load_fact.py** Operator to load the fact table in AWS Redshift
 6. **load_dimension.py** Operator to read from staging tables and load the dimension tables in Redshift
 7. **data_quality.py** Operator for data quality checking
 3. **README.md** Project description and instructions
@@ -56,4 +74,5 @@ The following References were used in this work, some lines of codes, wording an
 
 1. https://github.com/davidrubinger/udacity-dend-project-5
 2. https://github.com/gfkw/dend-project-5
-3. https://github.com/danieldiamond/udacity-dend/tree/master/data_pipelines_airflow
+3. https://github.com/danieldiamond/udacity-dend/tree/data_pipelines_airflow
+4. https://github.com/jukkakansanaho/udacity-dend-project-5
