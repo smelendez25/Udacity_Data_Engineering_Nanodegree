@@ -74,5 +74,6 @@ The following References were used in this work, some lines of codes, wording an
 
 1. https://github.com/davidrubinger/udacity-dend-project-5
 2. https://github.com/gfkw/dend-project-5
-3. https://github.com/danieldiamond/udacity-dend/tree/data_pipelines_airflow
+3. https://github.com/danieldiamond/udacity-dend/tree/master/data_pipelines_airflow
 4. https://github.com/jukkakansanaho/udacity-dend-project-5
+5. https://github.com/FedericoSerini/DEND-Project-5-Data-Pipelines
