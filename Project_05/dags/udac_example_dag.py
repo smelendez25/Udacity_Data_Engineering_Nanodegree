@@ -37,7 +37,7 @@ default_args = {
 dag = DAG('udac_example_dag',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
-          schedule_interval='0 * * * *',
+          schedule_interval='@hourly',
           catchup=False
           )
 
@@ -75,8 +75,8 @@ stage_events_to_redshift = StageToRedshiftOperator(
     aws_credentials_id="aws_credentials",
     table="staging_events",
     s3_bucket="udacity-dend",
-    s3_key="log_data",
-    file_format="CSV"
+    s3_key="log_data/",
+    file_format = 'JSON \'s3://udacity-dend/log_json_path.json\'' 
 )
 
 # Stage Song Data
@@ -88,7 +88,7 @@ stage_songs_to_redshift = StageToRedshiftOperator(
     table="staging_songs",
     s3_bucket="udacity-dend",
     s3_key="song_data",
-    file_format="JSON"
+    file_format = 'JSON \'auto\''
 )
 
 # Insert Fact Tables
@@ -137,55 +137,27 @@ load_time_table = LoadDimensionOperator(
     dag=dag
 )
 
-songplays_data_quality = DataQualityOperator(
-    task_id=f"quality_check_on_songplays",
-    redshift_conn_id="redshift",
-    table='songplays',
-    dag=dag
-)
-
-artists_data_quality = DataQualityOperator(
-    task_id=f"quality_check_on_artists",
-    redshift_conn_id="redshift",
-    table='artists',
-    test_stmt=SqlQueries.artist_table_insert,
-    result=(1,),
-    dag=dag
-)
-
-users_data_quality = DataQualityOperator(
-    task_id=f"quality_check_on_users",
-    redshift_conn_id="redshift",
-    table='users',
-    dag=dag
-)
-
-songs_data_quality = DataQualityOperator(
-    task_id=f"quality_check_on_songs",
-    redshift_conn_id="redshift",
-    table='songs',
-    dag=dag
-)
-
-time_data_quality = DataQualityOperator(
-    task_id=f"quality_check_on_time",
-    redshift_conn_id="redshift",
-    table='time',
+# Data Quality Checks
+run_quality_checks = DataQualityOperator(
+    task_id='Run_data_quality_checks',
+    redshift_conn_id='redshift',
+    test_query='select count(*) from songs where songid is null;',
+    expected_result=0,
     dag=dag
 )
 
 load_staging_tables >> [stage_events_to_redshift, stage_songs_to_redshift]
-[stage_events_to_redshift, stage_songs_to_redshift] >> load_songplays_table
-stage_songs_to_redshift >> [load_songs_table, load_artists_table]
-stage_events_to_redshift >> [load_users_table, load_time_table]
-load_songplays_table >> songplays_data_quality
-load_users_table >> users_data_quality
-load_artists_table >> artists_data_quality
-load_songs_table >> songs_data_quality
-load_time_table >> time_data_quality
+stage_songs_to_redshift >> load_songplays_table
+stage_events_to_redshift >> load_songplays_table
+load_songplays_table >> load_songs_table
+load_songplays_table >> load_artists_table
+load_songplays_table >> load_users_table
+load_songplays_table >> load_time_table
 
-[songplays_data_quality,
-    users_data_quality,
-    artists_data_quality,
-    songs_data_quality,
-    time_data_quality] >> end_operator
+[load_users_table,
+    load_artists_table,
+    load_songs_table,
+    load_time_table] >> run_quality_checks
+
+run_quality_checks >> end_operator
+
