@@ -52,6 +52,7 @@ Technologies used: Apache Airflow, S3, Amazon Redshift, Python.
 ## Project 06: [Data Engineering Capstone](./Project_06)
 
 This is the project work created during the  **Udacity Data Engineering Nanodegree** between Jan 2021 - May 2021.
+Project Name: I94 Immigration Data
 
 ### Certificate
 
