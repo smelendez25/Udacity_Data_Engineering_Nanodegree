@@ -57,4 +57,4 @@ This is the project work created during the  **Udacity Data Engineering Nanodegr
 
 ### Certificate
 
-- [View](TBD)
+- [View](https://confirm.udacity.com/GGESKKDG)
